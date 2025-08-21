@@ -1,0 +1,340 @@
+export const Config = {
+    // App Settings
+    AppName: "Sergei Eats",
+    AppVersion: "1.0.0",
+    
+    // Delivery Settings
+    DeliveryFee: 5.0,
+    TaxRate: 0.08, // 8% tax
+    MaxOrderValue: 1000.0,
+    MinOrderAmount: 10.0,
+    
+    // Driver Settings
+    DriverBasePay: 25.0,
+    DriverDistanceBonus: 0.5, // per unit distance
+    DriverTimeBonus: 0.1, // per minute
+    
+    // Order Settings
+    MaxPreparationTime: 45, // minutes
+    OrderTimeout: 30, // minutes to auto-cancel if not accepted
+    
+    // UI Settings
+    MaxItemsPerOrder: 20,
+    MaxCustomizationsPerItem: 10,
+    AutoRefreshInterval: 5000, // 5 seconds
+    
+    // Mock Data Settings
+    MockData: {
+        enabled: true, // Set to false in production
+        restaurants: [
+            {
+                id: "uwu-cafe",
+                name: "Uwu Cafe",
+                description: "Cozy cafe with delicious pastries and coffee",
+                job_name: "uwu",
+                owner_id: "UWU001",
+                phone: "+1-555-UWU-CAFE",
+                email: "info@uwucafe.com",
+                address: "123 Coffee Street, Los Santos",
+                location_x: 119.0,
+                location_y: -1036.0,
+                location_z: 29.0,
+                pickup_x: 119.0,
+                pickup_y: -1036.0,
+                pickup_z: 29.0,
+                is_active: true,
+                delivery_radius: 5000,
+                min_order_amount: 5.0,
+                delivery_fee: 3.0,
+                tax_rate: 0.08,
+                opening_hours: {
+                    monday: { open: "07:00", close: "22:00" },
+                    tuesday: { open: "07:00", close: "22:00" },
+                    wednesday: { open: "07:00", close: "22:00" },
+                    thursday: { open: "07:00", close: "22:00" },
+                    friday: { open: "07:00", close: "23:00" },
+                    saturday: { open: "08:00", close: "23:00" },
+                    sunday: { open: "08:00", close: "21:00" }
+                },
+                cuisine_type: "Cafe",
+                rating: 4.5,
+                total_orders: 1250,
+                created_at: "2024-01-01T00:00:00Z",
+                updated_at: "2024-01-01T00:00:00Z"
+            },
+            {
+                id: "burger-shot",
+                name: "Burger Shot",
+                description: "Fast food burgers and fries",
+                job_name: "burgershot",
+                owner_id: "BURGER001",
+                phone: "+1-555-BURGER",
+                email: "orders@burgershot.com",
+                address: "456 Burger Avenue, Los Santos",
+                location_x: -1191.0,
+                location_y: -900.0,
+                location_z: 14.0,
+                pickup_x: -1191.0,
+                pickup_y: -900.0,
+                pickup_z: 14.0,
+                is_active: true,
+                delivery_radius: 8000,
+                min_order_amount: 8.0,
+                delivery_fee: 5.0,
+                tax_rate: 0.08,
+                opening_hours: {
+                    monday: { open: "10:00", close: "02:00" },
+                    tuesday: { open: "10:00", close: "02:00" },
+                    wednesday: { open: "10:00", close: "02:00" },
+                    thursday: { open: "10:00", close: "02:00" },
+                    friday: { open: "10:00", close: "03:00" },
+                    saturday: { open: "10:00", close: "03:00" },
+                    sunday: { open: "10:00", close: "02:00" }
+                },
+                cuisine_type: "Fast Food",
+                rating: 4.2,
+                total_orders: 2100,
+                created_at: "2024-01-01T00:00:00Z",
+                updated_at: "2024-01-01T00:00:00Z"
+            },
+            {
+                id: "pizza-this",
+                name: "Pizza This",
+                description: "Authentic Italian pizza",
+                job_name: "pizzathis",
+                owner_id: "PIZZA001",
+                phone: "+1-555-PIZZA",
+                email: "delivery@pizzathis.com",
+                address: "789 Pizza Road, Los Santos",
+                location_x: 537.0,
+                location_y: 100.0,
+                location_z: 96.0,
+                pickup_x: 537.0,
+                pickup_y: 100.0,
+                pickup_z: 96.0,
+                is_active: true,
+                delivery_radius: 6000,
+                min_order_amount: 12.0,
+                delivery_fee: 4.0,
+                tax_rate: 0.08,
+                opening_hours: {
+                    monday: { open: "11:00", close: "23:00" },
+                    tuesday: { open: "11:00", close: "23:00" },
+                    wednesday: { open: "11:00", close: "23:00" },
+                    thursday: { open: "11:00", close: "23:00" },
+                    friday: { open: "11:00", close: "00:00" },
+                    saturday: { open: "11:00", close: "00:00" },
+                    sunday: { open: "12:00", close: "22:00" }
+                },
+                cuisine_type: "Italian",
+                rating: 4.7,
+                total_orders: 1800,
+                created_at: "2024-01-01T00:00:00Z",
+                updated_at: "2024-01-01T00:00:00Z"
+            }
+        ],
+        menu_categories: [
+            { id: 1, restaurant_id: "uwu-cafe", name: "Drinks", description: "Hot and cold beverages", sort_order: 1, is_active: true },
+            { id: 2, restaurant_id: "uwu-cafe", name: "Pastries", description: "Fresh baked goods", sort_order: 2, is_active: true },
+            { id: 3, restaurant_id: "uwu-cafe", name: "Food", description: "Light meals and snacks", sort_order: 3, is_active: true },
+            { id: 4, restaurant_id: "burger-shot", name: "Burgers", description: "Classic beef burgers", sort_order: 1, is_active: true },
+            { id: 5, restaurant_id: "burger-shot", name: "Sides", description: "French fries and more", sort_order: 2, is_active: true },
+            { id: 6, restaurant_id: "burger-shot", name: "Drinks", description: "Soft drinks and shakes", sort_order: 3, is_active: true },
+            { id: 7, restaurant_id: "pizza-this", name: "Pizza", description: "Authentic Italian pizzas", sort_order: 1, is_active: true },
+            { id: 8, restaurant_id: "pizza-this", name: "Sides", description: "Garlic bread and more", sort_order: 2, is_active: true }
+        ],
+        menu_items: [
+            {
+                id: "uwu-coffee",
+                restaurant_id: "uwu-cafe",
+                category_id: 1,
+                name: "Uwu Coffee",
+                description: "Special blend coffee with a hint of vanilla",
+                price: 5.00,
+                original_price: 6.00,
+                image_url: "https://via.placeholder.com/300x200/8B4513/FFFFFF?text=Uwu+Coffee",
+                is_available: true,
+                is_featured: true,
+                allergens: ["caffeine"],
+                nutrition_info: { calories: 5, protein: 0, carbs: 1, fat: 0 },
+                preparation_time: 5,
+                sort_order: 1
+            },
+            {
+                id: "uwu-croissant",
+                restaurant_id: "uwu-cafe",
+                category_id: 2,
+                name: "Uwu Croissant",
+                description: "Fresh baked buttery croissant",
+                price: 3.00,
+                original_price: 3.50,
+                image_url: "https://via.placeholder.com/300x200/DAA520/FFFFFF?text=Croissant",
+                is_available: true,
+                is_featured: false,
+                allergens: ["gluten", "dairy"],
+                nutrition_info: { calories: 180, protein: 4, carbs: 22, fat: 9 },
+                preparation_time: 3,
+                sort_order: 1
+            },
+            {
+                id: "uwu-sandwich",
+                restaurant_id: "uwu-cafe",
+                category_id: 3,
+                name: "Uwu Sandwich",
+                description: "Delicious turkey and cheese sandwich",
+                price: 8.00,
+                original_price: 9.00,
+                image_url: "https://via.placeholder.com/300x200/DEB887/FFFFFF?text=Sandwich",
+                is_available: true,
+                is_featured: true,
+                allergens: ["gluten", "dairy"],
+                nutrition_info: { calories: 320, protein: 18, carbs: 35, fat: 12 },
+                preparation_time: 10,
+                sort_order: 1
+            },
+            {
+                id: "burger-shot-burger",
+                restaurant_id: "burger-shot",
+                category_id: 4,
+                name: "Burger Shot Burger",
+                description: "Classic beef burger with lettuce, tomato, and cheese",
+                price: 12.00,
+                original_price: 14.00,
+                image_url: "https://via.placeholder.com/300x200/8B4513/FFFFFF?text=Burger",
+                is_available: true,
+                is_featured: true,
+                allergens: ["gluten", "dairy", "beef"],
+                nutrition_info: { calories: 650, protein: 28, carbs: 45, fat: 35 },
+                preparation_time: 8,
+                sort_order: 1
+            },
+            {
+                id: "burger-shot-fries",
+                restaurant_id: "burger-shot",
+                category_id: 5,
+                name: "Burger Shot Fries",
+                description: "Crispy golden french fries",
+                price: 6.00,
+                original_price: 7.00,
+                image_url: "https://via.placeholder.com/300x200/FFD700/FFFFFF?text=Fries",
+                is_available: true,
+                is_featured: false,
+                allergens: ["gluten"],
+                nutrition_info: { calories: 380, protein: 4, carbs: 45, fat: 18 },
+                preparation_time: 5,
+                sort_order: 1
+            },
+            {
+                id: "burger-shot-shake",
+                restaurant_id: "burger-shot",
+                category_id: 6,
+                name: "Burger Shot Shake",
+                description: "Chocolate milkshake with whipped cream",
+                price: 4.00,
+                original_price: 5.00,
+                image_url: "https://via.placeholder.com/300x200/8B4513/FFFFFF?text=Shake",
+                is_available: true,
+                is_featured: false,
+                allergens: ["dairy", "chocolate"],
+                nutrition_info: { calories: 420, protein: 8, carbs: 52, fat: 18 },
+                preparation_time: 3,
+                sort_order: 1
+            },
+            {
+                id: "pizza-this-margherita",
+                restaurant_id: "pizza-this",
+                category_id: 7,
+                name: "Margherita Pizza",
+                description: "Classic tomato and mozzarella pizza",
+                price: 15.00,
+                original_price: 18.00,
+                image_url: "https://via.placeholder.com/300x200/DC143C/FFFFFF?text=Margherita",
+                is_available: true,
+                is_featured: true,
+                allergens: ["gluten", "dairy"],
+                nutrition_info: { calories: 850, protein: 32, carbs: 95, fat: 28 },
+                preparation_time: 15,
+                sort_order: 1
+            },
+            {
+                id: "pizza-this-pepperoni",
+                restaurant_id: "pizza-this",
+                category_id: 7,
+                name: "Pepperoni Pizza",
+                description: "Spicy pepperoni pizza with extra cheese",
+                price: 18.00,
+                original_price: 20.00,
+                image_url: "https://via.placeholder.com/300x200/8B0000/FFFFFF?text=Pepperoni",
+                is_available: true,
+                is_featured: true,
+                allergens: ["gluten", "dairy", "pork"],
+                nutrition_info: { calories: 920, protein: 38, carbs: 95, fat: 32 },
+                preparation_time: 15,
+                sort_order: 2
+            },
+            {
+                id: "pizza-this-garlic-bread",
+                restaurant_id: "pizza-this",
+                category_id: 8,
+                name: "Garlic Bread",
+                description: "Fresh garlic bread with herbs",
+                price: 7.00,
+                original_price: 8.00,
+                image_url: "https://via.placeholder.com/300x200/F4A460/FFFFFF?text=Garlic+Bread",
+                is_available: true,
+                is_featured: false,
+                allergens: ["gluten", "dairy"],
+                nutrition_info: { calories: 280, protein: 6, carbs: 32, fat: 14 },
+                preparation_time: 8,
+                sort_order: 1
+            }
+        ],
+        discounts: [
+            {
+                id: 1,
+                code: "WELCOME10",
+                name: "Welcome Discount",
+                description: "10% off your first order",
+                type: "percentage",
+                value: 10.00,
+                min_order_amount: 20.00,
+                max_discount_amount: 15.00,
+                usage_limit: 1,
+                used_count: 0,
+                is_active: true,
+                valid_from: "2024-01-01T00:00:00Z",
+                valid_until: "2024-12-31T23:59:59Z"
+            },
+            {
+                id: 2,
+                code: "FREEDELIVERY",
+                name: "Free Delivery",
+                description: "Free delivery on orders over $30",
+                type: "free_delivery",
+                value: 5.00,
+                min_order_amount: 30.00,
+                max_discount_amount: null,
+                usage_limit: null,
+                used_count: 0,
+                is_active: true,
+                valid_from: "2024-01-01T00:00:00Z",
+                valid_until: "2024-12-31T23:59:59Z"
+            },
+            {
+                id: 3,
+                code: "SAVE5",
+                name: "Save $5",
+                description: "Save $5 on orders over $25",
+                type: "fixed_amount",
+                value: 5.00,
+                min_order_amount: 25.00,
+                max_discount_amount: 5.00,
+                usage_limit: null,
+                used_count: 0,
+                is_active: true,
+                valid_from: "2024-01-01T00:00:00Z",
+                valid_until: "2024-12-31T23:59:59Z"
+            }
+        ]
+    }
+}
